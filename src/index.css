@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Soft Romantic Boutique Style Color Palette */
+    --background: 345 100% 91%;
+    /* Baby Pink */
+    --foreground: 0 23% 29%;
+    /* Deep Plum Text */
+
+    --card: 40 100% 94%;
+    /* Cream */
+    --card-foreground: 0 23% 29%;
+
+    --popover: 40 100% 94%;
+    --popover-foreground: 0 23% 29%;
+
+    /* Lavender Primary */
+    --primary: 255 45% 95%;
+    /* Soft Lavender */
+    --primary-foreground: 0 23% 29%;
+
+    /* Cream Secondary */
+    --secondary: 40 100% 94%;
+    /* Cream */
+    --secondary-foreground: 0 23% 29%;
+
+    --muted: 345 50% 85%;
+    /* Darker Baby Pink */
+    --muted-foreground: 0 23% 29% / 0.6;
+
+    /* Lavender Accent */
+    --accent: 255 45% 95%;
+    /* Soft Lavender */
+    --accent-foreground: 0 23% 29%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 345 100% 91%;
+
+    --border: 255 45% 95% / 0.5;
+    /* Lavender border */
+    --input: 255 45% 95% / 0.5;
+    --ring: 255 45% 95%;
+
+    --radius: 0.5rem;
+
+    /* Custom Luxury Colors */
+    --champagne: 345 100% 91%;
+    /* Baby Pink */
+    --gold: 255 45% 95%;
+    /* Soft Lavender Accent */
+    --gold-light: 255 45% 98%;
+    --rose: 345 100% 91%;
+    /* Baby Pink */
+    --charcoal: 0 23% 29%;
+    /* Deep Plum */
+    --cream: 40 100% 94%;
+    /* Cream */
+    --maroon: 0 23% 29%;
+    /* Deep Plum Accent */
+    --taupe: 345 30% 80% / 0.4;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(255 45% 95%), hsl(255 45% 90%));
+    --gradient-maroon: linear-gradient(135deg, hsl(0 23% 29%), hsl(0 23% 35%));
+    --gradient-luxury: linear-gradient(180deg, hsl(345 100% 91%), hsl(40 100% 94%));
+    --gradient-overlay: linear-gradient(180deg, rgba(93, 58, 58, 0.2), rgba(93, 58, 58, 0.5));
+
+    /* Shadows - Refined for professional look */
+    --shadow-soft: 0 4px 20px -4px hsla(0, 12%, 20%, 0.1);
+    --shadow-elegant: 0 10px 40px -10px hsla(42, 49%, 57%, 0.15);
+    --shadow-card: 0 2px 12px -2px hsla(0, 12%, 20%, 0.08);
+
+    --sidebar-background: 40 100% 94%;
+    /* Cream */
+    --sidebar-foreground: 0 23% 29%;
+    --sidebar-primary: 255 45% 95%;
+    /* Lavender */
+    --sidebar-primary-foreground: 0 23% 29%;
+    --sidebar-accent: 345 100% 91%;
+    /* Baby Pink */
+    --sidebar-accent-foreground: 0 23% 29%;
+    --sidebar-border: 255 45% 95% / 0.5;
+    --sidebar-ring: 255 45% 95%;
+  }
+
+  .dark {
+    --background: 0 23% 29%;
+    /* Deep Plum */
+    --foreground: 345 100% 91%;
+    /* Baby Pink */
+
+    --card: 0 23% 24%;
+    /* Darker Plum */
+    --card-foreground: 345 100% 91%;
+
+    --popover: 0 23% 24%;
+    --popover-foreground: 345 100% 91%;
+
+    --primary: 255 45% 95%;
+    /* Soft Lavender Accent */
+    --primary-foreground: 0 23% 29%;
+
+    --secondary: 0 23% 20%;
+    /* Very Dark Plum Secondary */
+    --secondary-foreground: 345 100% 91%;
+
+    --muted: 0 23% 35%;
+    --muted-foreground: 345 100% 91% / 0.6;
+
+    --accent: 255 45% 95%;
+    /* Soft Lavender Accent */
+    --accent-foreground: 0 23% 29%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 345 100% 91%;
+
+    --border: 255 45% 95% / 0.2;
+    --input: 255 45% 95% / 0.2;
+    --ring: 255 45% 95%;
+
+    /* Sidebars */
+    --sidebar-background: 0 23% 20%;
+    /* Very Dark Plum */
+    --sidebar-foreground: 345 100% 91%;
+    /* Baby Pink */
+    --sidebar-primary: 255 45% 95%;
+    /* Lavender */
+    --sidebar-primary-foreground: 0 23% 29%;
+    --sidebar-accent: 345 100% 91%;
+    /* Baby Pink */
+    --sidebar-accent-foreground: 0 23% 29%;
+    --sidebar-border: 255 45% 95% / 0.2;
+    --sidebar-ring: 255 45% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+
+  /* Safe area for bottom navigation on mobile */
+  .pb-safe-bottom {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (min-width: 768px) {
+    .pb-safe-bottom {
+      padding-bottom: 0;
+    }
+  }
+
+  .text-shadow-lux {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-accent {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Luxury Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-gold {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(38 65% 50% / 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 15px hsl(38 65% 50% / 0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(38 65% 50% / 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-gold {
+    animation: pulse-gold 2s infinite;
+  }
+
+  /* Stagger Animation Delays */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.8);
+  }
+}
