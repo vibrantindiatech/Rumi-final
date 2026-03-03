@@ -6,136 +6,109 @@
 
 @layer base {
   :root {
-    /* Soft Romantic Boutique Style Color Palette */
-    --background: 345 100% 91%;
-    /* Baby Pink */
-    --foreground: 0 23% 29%;
-    /* Deep Plum Text */
+    /* Luxury Minimal Web Design Color Palette */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 0 8% 27%; /* Deep Mocha Text */
 
-    --card: 40 100% 94%;
-    /* Cream */
-    --card-foreground: 0 23% 29%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 8% 27%;
 
-    --popover: 40 100% 94%;
-    --popover-foreground: 0 23% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 8% 27%;
 
-    /* Lavender Primary */
-    --primary: 255 45% 95%;
-    /* Soft Lavender */
-    --primary-foreground: 0 23% 29%;
+    /* Dusty Rose Primary */
+    --primary: 348 41% 75%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Cream Secondary */
-    --secondary: 40 100% 94%;
-    /* Cream */
-    --secondary-foreground: 0 23% 29%;
+    /* Warm Ivory Secondary */
+    --secondary: 28 100% 97%;
+    --secondary-foreground: 0 8% 27%;
 
-    --muted: 345 50% 85%;
-    /* Darker Baby Pink */
-    --muted-foreground: 0 23% 29% / 0.6;
+    --muted: 28 100% 97%;
+    --muted-foreground: 0 8% 27% / 0.6;
 
-    /* Lavender Accent */
-    --accent: 255 45% 95%;
-    /* Soft Lavender */
-    --accent-foreground: 0 23% 29%;
+    /* Muted Mauve Accent */
+    --accent: 300 26% 71%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 345 100% 91%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 255 45% 95% / 0.5;
-    /* Lavender border */
-    --input: 255 45% 95% / 0.5;
-    --ring: 255 45% 95%;
+    --border: 0 8% 27% / 0.1;
+    --input: 0 8% 27% / 0.1;
+    --ring: 348 41% 75%;
 
     --radius: 0.5rem;
 
     /* Custom Luxury Colors */
-    --champagne: 345 100% 91%;
-    /* Baby Pink */
-    --gold: 255 45% 95%;
-    /* Soft Lavender Accent */
-    --gold-light: 255 45% 98%;
-    --rose: 345 100% 91%;
-    /* Baby Pink */
-    --charcoal: 0 23% 29%;
-    /* Deep Plum */
-    --cream: 40 100% 94%;
-    /* Cream */
-    --maroon: 0 23% 29%;
-    /* Deep Plum Accent */
-    --taupe: 345 30% 80% / 0.4;
+    --champagne: 348 41% 75%; /* Dusty Rose */
+    --gold: 300 26% 71%; /* Muted Mauve */
+    --gold-light: 28 100% 97%; /* Warm Ivory */
+    --rose: 348 41% 75%; /* Dusty Rose */
+    --charcoal: 0 8% 27%; /* Deep Mocha */
+    --cream: 28 100% 97%; /* Warm Ivory */
+    --maroon: 0 8% 27%; /* Deep Mocha */
+    --taupe: 300 26% 71% / 0.4;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(255 45% 95%), hsl(255 45% 90%));
-    --gradient-maroon: linear-gradient(135deg, hsl(0 23% 29%), hsl(0 23% 35%));
-    --gradient-luxury: linear-gradient(180deg, hsl(345 100% 91%), hsl(40 100% 94%));
-    --gradient-overlay: linear-gradient(180deg, rgba(93, 58, 58, 0.2), rgba(93, 58, 58, 0.5));
+    --gradient-gold: linear-gradient(135deg, hsl(300 26% 71%), hsl(348 41% 75%));
+    --gradient-maroon: linear-gradient(135deg, hsl(0 8% 27%), hsl(0 8% 35%));
+    --gradient-luxury: linear-gradient(180deg, hsl(0 0% 100%), hsl(28 100% 97%));
+    --gradient-overlay: linear-gradient(180deg, rgba(74, 63, 63, 0.2), rgba(74, 63, 63, 0.5));
 
     /* Shadows - Refined for professional look */
-    --shadow-soft: 0 4px 20px -4px hsla(0, 12%, 20%, 0.1);
-    --shadow-elegant: 0 10px 40px -10px hsla(42, 49%, 57%, 0.15);
-    --shadow-card: 0 2px 12px -2px hsla(0, 12%, 20%, 0.08);
+    --shadow-soft: 0 4px 20px -4px hsla(0, 0%, 0%, 0.05);
+    --shadow-elegant: 0 10px 40px -10px hsla(0, 0%, 0%, 0.08);
+    --shadow-card: 0 2px 12px -2px hsla(0, 0%, 0%, 0.04);
 
-    --sidebar-background: 40 100% 94%;
-    /* Cream */
-    --sidebar-foreground: 0 23% 29%;
-    --sidebar-primary: 255 45% 95%;
-    /* Lavender */
-    --sidebar-primary-foreground: 0 23% 29%;
-    --sidebar-accent: 345 100% 91%;
-    /* Baby Pink */
-    --sidebar-accent-foreground: 0 23% 29%;
-    --sidebar-border: 255 45% 95% / 0.5;
-    --sidebar-ring: 255 45% 95%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 8% 27%;
+    --sidebar-primary: 348 41% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 28 100% 97%;
+    --sidebar-accent-foreground: 0 8% 27%;
+    --sidebar-border: 0 8% 27% / 0.1;
+    --sidebar-ring: 348 41% 75%;
   }
 
   .dark {
-    --background: 0 23% 29%;
-    /* Deep Plum */
-    --foreground: 345 100% 91%;
-    /* Baby Pink */
+    --background: 0 8% 15%; /* Dark Mocha */
+    --foreground: 0 0% 100%; /* Pure White */
 
-    --card: 0 23% 24%;
-    /* Darker Plum */
-    --card-foreground: 345 100% 91%;
+    --card: 0 8% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 23% 24%;
-    --popover-foreground: 345 100% 91%;
+    --popover: 0 8% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 255 45% 95%;
-    /* Soft Lavender Accent */
-    --primary-foreground: 0 23% 29%;
+    --primary: 348 41% 75%; /* Dusty Rose */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 23% 20%;
-    /* Very Dark Plum Secondary */
-    --secondary-foreground: 345 100% 91%;
+    --secondary: 0 8% 22%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 23% 35%;
-    --muted-foreground: 345 100% 91% / 0.6;
+    --muted: 0 8% 22%;
+    --muted-foreground: 0 0% 100% / 0.6;
 
-    --accent: 255 45% 95%;
-    /* Soft Lavender Accent */
-    --accent-foreground: 0 23% 29%;
+    --accent: 300 26% 71%; /* Muted Mauve */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 40%;
-    --destructive-foreground: 345 100% 91%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 255 45% 95% / 0.2;
-    --input: 255 45% 95% / 0.2;
-    --ring: 255 45% 95%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 348 41% 75%;
 
     /* Sidebars */
-    --sidebar-background: 0 23% 20%;
-    /* Very Dark Plum */
-    --sidebar-foreground: 345 100% 91%;
-    /* Baby Pink */
-    --sidebar-primary: 255 45% 95%;
-    /* Lavender */
-    --sidebar-primary-foreground: 0 23% 29%;
-    --sidebar-accent: 345 100% 91%;
-    /* Baby Pink */
-    --sidebar-accent-foreground: 0 23% 29%;
-    --sidebar-border: 255 45% 95% / 0.2;
-    --sidebar-ring: 255 45% 95%;
+    --sidebar-background: 0 8% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 348 41% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 8% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 348 41% 75%;
   }
 }
 
